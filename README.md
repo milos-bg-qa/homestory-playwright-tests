@@ -66,29 +66,6 @@ npx playwright test --headed --workers=1
 
 ---
 
-## Adding to CI (Optional)
-A basic GitHub Actions workflow would look like:
-
-```
-name: Playwright Tests
-
-on: [push, pull_request]
-
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
-      - run: npx playwright install --with-deps
-      - run: npx playwright test
-```
-
----
-
 ## Reporting
 Playwright HTML reports are automatically generated after each test run:
 
@@ -107,6 +84,3 @@ npx playwright show-report
 - Optimized for maintainability and readability.
 
 ---
-
-## Contact
-For further automation enhancements, extensions, or integration into CI/CD, feel free to reach out.
